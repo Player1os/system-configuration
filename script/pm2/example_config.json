@@ -1,0 +1,15 @@
+{
+	"apps": [{
+		"name": "node-js-application",
+		"script": "index.js",
+		"cwd": "node-js-application/current",
+		"log_date_format": "YYYY-MM-DD HH:mm:ss",
+		"exec_mode": "fork_mode",
+		"error_file": "output/err.log",
+		"out_file": "output/out.log",
+		"wait_ready": true,
+		"listen_timeout" : 4000,
+		"kill_timeout" : 12000,
+		"combine_logs": false
+	}]
+}

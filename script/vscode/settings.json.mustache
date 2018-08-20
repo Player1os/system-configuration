@@ -1,0 +1,75 @@
+{
+	"cSpell.enabledLanguageIds": [
+		"asciidoc",
+		"c",
+		"cpp",
+		"csharp",
+		"css",
+		"go",
+		"handlebars",
+		"html",
+		"jade",
+		"javascript",
+		"javascriptreact",
+		"json",
+		"latex",
+		"less",
+		"markdown",
+		"mustache",
+		"php",
+		"plaintext",
+		"pub",
+		"python",
+		"restructuredtext",
+		"rust",
+		"scss",
+		"text",
+		"typescript",
+		"typescriptreact",
+		"yml"
+	],
+	"cSpell.language": "en",
+	"cSpell.userWords": [
+		"autofetch",
+		"com",
+		"eslintignore",
+		"gitattributes",
+		"gitignore",
+		"gmail",
+		"hassanein",
+		"os",
+		"osama",
+		"player",
+		"postversion",
+		"preversion",
+		"rebased",
+		"vsicons"
+	],
+	"editor.renderWhitespace": "all",
+	"editor.rulers": [140],
+	"editor.wordWrap": "on",
+	"eslint.options": {
+		"ignorePath": "{{HOME}}\\.eslintignore"
+	},
+	"extensions.ignoreRecommendations": true,
+	"git.autofetch": true,
+	"git.confirmSync": false,
+	"git.enableSmartCommit": true,
+{{#CONTROLLED_ENVIRONMENT}}
+	"http.proxyStrictSSL": false,
+{{/CONTROLLED_ENVIRONMENT}}
+	"launch": {{DEBUGGER_CONFIGURATIONS}},
+	"npm-intellisense.scanDevDependencies": true,
+	"path-autocomplete.pathMappings": { "...": "${workspace}" },
+{{#WINDOWS}}
+	"terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+{{/WINDOWS}}
+	"typescript.autoImportSuggestions.enabled": false,
+	"typescript.referencesCodeLens.enabled": true,
+{{#CONTROLLED_ENVIRONMENT}}
+	"vsicons.dontShowNewVersionMessage": true,
+{{/CONTROLLED_ENVIRONMENT}}
+	"vsicons.presets.angular": true,
+	"vsicons.projectDetection.disableDetect": true,
+	"workbench.iconTheme": "vscode-icons"
+}

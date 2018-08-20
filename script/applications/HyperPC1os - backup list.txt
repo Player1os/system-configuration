@@ -1,0 +1,3 @@
+- Virtual machines under "C:\"
+- SSH keys under "C:\Users\Player1os"
+- Game saves under "C:\Games" and "C:\Users\Player1os"

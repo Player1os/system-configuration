@@ -1,0 +1,4 @@
+GIT_SSH=C:\Programs\putty\plink.exe
+HOME=C:\Users\osama.hassanein\
+OCI_INC_DIR=C:\Programs\Oracle\instantclient\sdk\include
+OCI_LIB_DIR=C:\Programs\Oracle\instantclient\sdk\lib\msvc
