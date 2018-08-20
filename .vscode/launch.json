@@ -5,7 +5,11 @@
 		"type": "node",
 		"request": "launch",
 		"args": ["${relativeFile}"],
-		"runtimeArgs": ["--nolazy"],
+		"runtimeArgs": [
+			"--nolazy",
+			"-r", "dotenv/config",
+			"-r", "@player1os/javascript-support/lib/runtime"
+		],
 		"cwd": "${workspaceRoot}",
 		"protocol": "inspector",
 		"windows": {
