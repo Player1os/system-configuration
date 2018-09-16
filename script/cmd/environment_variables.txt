@@ -2,3 +2,7 @@ GIT_SSH=C:\Programs\putty\plink.exe
 HOME=C:\Users\osama.hassanein\
 OCI_INC_DIR=C:\Programs\Oracle\instantclient\sdk\include
 OCI_LIB_DIR=C:\Programs\Oracle\instantclient\sdk\lib\msvc
+{IF CERT NEEDED BEGIN}
+NODE_EXTRA_CA_CERTS=%HOME%.cert\ca-telekom.cer
+SSL_CERT_FILE=%HOME%.cert\ca-telekom.cer
+{IF CERT NEEDED BEGIN}
