@@ -5,5 +5,7 @@
 [user]
 	name = {{USER_FULL_NAME}}
 	email = {{USER_EMAIL}}
+{{IF_CERT_NEEDED_BEGIN}}
 [http]
 	sslcainfo = {{ESCAPED_HOME_PATH}}\\.cert\\ca-telekom.cer
+{{IF_CERT_NEEDED_END}}
