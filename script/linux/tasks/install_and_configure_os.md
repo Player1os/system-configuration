@@ -82,3 +82,8 @@ Install the following applications simply by visiting their respective sites, do
 	- Create the `.eslintignore` configuration file.
 	- Create the `.editorconfig` configuration file.
 
+# Remove useless folders
+
+- ~/Documents
+- ~/Public
+- ~/Templates
