@@ -6,7 +6,7 @@ Add the following to the `~/.bashrc` configuration file:
 env=~/.ssh/agent.env
 
 agent_load_env () { \
-    test -f "$env" && . "$env" >| /dev/null ; \
+	test -f "$env" && . "$env" >| /dev/null ; \
 }
 
 agent_start () {
