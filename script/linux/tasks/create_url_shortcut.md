@@ -6,6 +6,6 @@ Encoding=UTF-8
 Type=Link
 Name=<application name>
 URL=<url>
-Icon=/home/<username>/One Drive/Icons/<application name without spaces>.png
+Icon=<icons dir path>/<application name without spaces>.png
 ```
-1. If needed add a png named `<application name without spaces>.png` for the shortcut into the `~/OneDrive/Icons` directory.
+1. If needed add a png named `<application name without spaces>.png` for the shortcut into the *icons* directory.
