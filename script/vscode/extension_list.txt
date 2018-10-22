@@ -8,11 +8,9 @@ editorconfig.editorconfig
 dbaeumer.vscode-eslint
 donjayamanne.githistory
 codezombiech.gitignore
-dawhite.mustache
 eg2.vscode-npm-script
 christian-kohler.npm-intellisense
 ionutvmi.path-autocomplete
-alefragnani.project-manager
 ms-python.python
 rafaelmaiolla.remote-vscode
 eg2.tslint
