@@ -16,5 +16,7 @@
 - pgAdmin4
 - Discord
 	- Follow the instructions in https://discordapp.com
-- Pinta
-	- Follow the instructions in https://pinta-project.com/pintaproject/pinta/howto/installing-pinta
+- Keepass 2
+	- Run `../linux/tasks/install_keepass.sh`
+- Draw.io
+	- Follow the instructions in https://about.draw.io/integrations/#integrations_offline
