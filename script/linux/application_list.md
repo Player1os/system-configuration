@@ -1,0 +1,27 @@
+- Visual Studio Code
+	- Follow the instructions in https://code.visualstudio.com/.
+	- Install the extensions.
+	- Modify settings.
+	- Add to the Launcher.
+	- Create the `.eslintignore` configuration file.
+	- Create the `.editorconfig` configuration file.
+- Git
+	- Run `sudo apt-get install -y git`.
+- Node
+	- Run `../linux/tasks/install_nodenv.sh`.
+- Python3
+- Google Chrome
+	- Follow the instructions in https://www.google.com/chrome/.
+	- Set it as the default web browser.
+- One Drive
+	- Run `../linux/tasks/install_onedrive.sh`.
+- Resilio Sync
+	- Install manually by following the instructions in https://help.resilio.com/hc/en-us/articles/206178924-Installing-Sync-package-on-Linux.
+- PostgreSQL
+- pgAdmin4
+- Discord
+	- Follow the instructions in https://discordapp.com.
+- Keepass 2
+	- Run `../linux/tasks/install_keepass.sh`.
+- Draw.io
+	- Follow the instructions in https://about.draw.io/integrations/#integrations_offline.

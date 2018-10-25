@@ -53,4 +53,3 @@
 1. Type `sudo ./VBoxLinuxAdditions.run` in the newly opened terminal window.
 1. Reboot the system.
 1. Open the *File Manager* window and eject the `VBox_GAs_x.y.z` drive.
-
