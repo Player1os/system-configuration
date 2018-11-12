@@ -37,7 +37,7 @@ nodenv install ${APP_NODENV_NODE_VERSION}
 nodenv rehash
 nodenv global ${APP_NODENV_NODE_VERSION}
 
-# Update the npm application to the required version. 
+# Update the npm application to the required version.
 npm i -g npm@${APP_NODENV_NPM_VERSION}
 
 # Make sure the extra certification authority is added.
@@ -46,3 +46,7 @@ if [ ! -z ${APP_NODENV_EXTRA_CERTIFICATE_AUTHORITY} ]; then
 
 	echo "NODE_EXTRA_CA_CERTS=${APP_NODENV_EXTRA_CERTIFICATE_AUTHORITY}" >> ~/.bashrc
 fi
+
+# Add the local node modules bin file to the path variable.
+echo 'export PATH="node_modules/.bin:$PATH"' >> ~/.bashrc
+export PATH="node_modules/.bin:$PATH"
