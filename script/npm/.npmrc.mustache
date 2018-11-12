@@ -1,4 +1,7 @@
 {{IF_CERT_NEEDED_BEGIN}}
-cafile={{HOME}}\.cert\ca-telekom.cer
+cafile={{HOME}}\.cert_auth_bundle.cer
 {{IF_CERT_NEEDED_END}}
 engine-strict=true
+{{IF_PRIVATE_PACKAGE_BEGIN}}
+@{{PRIVATE_SCOPE_NAME}}:registry=http://localhost:4873/
+{{IF_PRIVATE_PACKAGE_END}}
