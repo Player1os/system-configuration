@@ -48,6 +48,37 @@
 	1. Right click in the lower task bar, where the *LXTerminal* entry is located.
 	1. Click on *Add to Launcher*.
 	1. Close the *LXTerminal* window.
+
+# Activate the rc.local service
+
+1. Create the file `/etc/rc.local` with administrator rights.
+	1. Fill it with the following content:
+		```bash
+		#!/bin/bash
+		exit 0
+		```
+	1. Add execution rights to the file `sudo chmod +x /etc/rc.local`.
+1. Execute the following commands:
+	```bash
+	sudo systemctl enable rc-local
+	sudo systemctl restart rc-local
+	```
+
+# Configure the File Manager
+
+Open a *File Manager* window:
+
+1. On the top of the left panel select the `Directory Tree` option.
+1. On the top bar click on the *Preferences* button.
+	1. Click on the *General* option in the left menu.
+		1. Set the *View Mode* field in the *Default View* section to `Detailed list view`.
+	1. Click on the *Display* option in the left menu.
+		1. Set the *Show icons of hidden files shadowed* field in the *User Interface* section to `TRUE`.
+	1. Click on the **Close** button in the lower right portion of the window.
+1. Press the `Ctrl+H` keys.
+
+# Configure the numlock startup state
+
 1. Open a terminal window:
 	1. Enter the following command `sudo apt-get -y install numlockx`.
 	1. Add the following line
@@ -60,15 +91,6 @@
 	1. Type in `/usr/bin/numlockx on` under *Manual autostarted applications*.
 	1. Click the **Add** button.
 	1. Close the window.
-1. Open a *File Manager* window:
-	1. On the top of the left panel select the `Directory Tree` option.
-	1. On the top bar click on the *Preferences* button.
-		1. Click on the *General* option in the left menu.
-			1. Set the *View Mode* field in the *Default View* section to `Detailed list view`.
-		1. Click on the *Display* option in the left menu.
-			1. Set the *Show icons of hidden files shadowed* field in the *User Interface* section to `TRUE`.
-		1. Click on the **Close** button in the lower right portion of the window.
-	1. Press the `Ctrl+H` keys.
 
 # Remove useless folders
 
