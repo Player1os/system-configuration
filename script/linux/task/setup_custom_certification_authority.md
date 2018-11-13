@@ -1,10 +1,10 @@
 # Retrieve the certification authority file
 
-TODO
+>TODO
 
-# Configure the webbrowser to run correctly
+# Configure the web browser to run correctly
 
-TODO
+>TODO
 
 # Configure other applications to run correctly
 
@@ -12,5 +12,5 @@ Add the following to the `~/.bashrc` file:
 
 ```bash
 ## Extra CA Bundle
-SSL_CERT_FILE=<ca-bundle.crt_file_location>
+SSL_CERT_FILE=~/cert_auth_bundle.cer
 ```

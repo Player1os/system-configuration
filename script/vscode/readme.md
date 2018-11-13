@@ -1,8 +1,10 @@
-# Settings location
+# Download and install
 
-`C:\Users\osama.hassanein\AppData\Roaming\Code\User`
+Follow the instructions in https://code.visualstudio.com/.
 
 # Extensions
+
+Install the following extensions:
 
 - vncz.vscode-apielements
 - ms-vscode.cpptools
@@ -23,6 +25,20 @@
 - spences10.vba
 - robertohuertasm.vscode-icons
 
+# Settings
+
+Modify the settings as per the `./settings.json.mustache` file.
+
+The location of the settings file on windows is `C:\Users\osama.hassanein\AppData\Roaming\Code\User`.
+
+Copy the following files into the home directory:
+- `./.eslintignore`
+- `./.editorconfig`
+
 # Install .NET CLI Tools
 
-- for Linux, follow the instructions at `https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial`.
+For Linux, follow the instructions at `https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial`.
+
+# Linux
+
+Add to the Launcher

@@ -71,3 +71,18 @@ For each shared folder do the following:
 	where `<SHARED_FOLDER_NAME>` is the name given to the shared folder within VirtualBox in the host machine and `<MOUNT_DIRECTORY>` is the directory within the guest machine to which the shared folder is mounted.
 
 When all shared folders are added, reboot the system.
+
+# Application list
+
+- [Visual Studio Code](../vscode/readme.md)
+- [Git](../git/readme.md)
+- [Node](../nodejs/readme.md)
+- [Python](../python.md)
+- [Google Chrome](../chrome.md)
+- [PostgreSQL](../postgresql/readme.md)
+- [pgAdmin4](../postgresql/pgadmin.md)
+
+## Optional
+
+- [Google Backup and Sync](https://www.google.com/drive/download/backup-and-sync/)
+- [Resilio Sync](../resilio_sync.md)

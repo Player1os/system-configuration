@@ -11,3 +11,10 @@
 
 # Install nodenv and configure node and npm.
 ./tasks/install_nodenv.sh
+
+# Application list
+
+- [Git](../git/readme.md)
+- [Node](../nodejs/readme.md)
+- [Python](../python.md)
+- [PostgreSQL](../postgresql/readme.md)
