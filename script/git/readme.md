@@ -7,3 +7,5 @@ If on Windows, configure to use *Putty* as the ssh client by setting the followi
 Installation:
 - Windows: Visit [git-scm.com](https://git-scm.com/).
 - Linux: Execute `sudo apt-get -y install git`.
+
+Copy the template files located in this directory.
