@@ -1,13 +1,6 @@
 Windows
 - Weather (large live tile)
 	- configure location
-- Calendar (large live tile)
-	- configure player1os@gmail.com account (mail, contacts, calendar)
-	- configure everest.eu@gmail.com account (mail, contacts, calendar)
-	- configure osama.hassanein@live.com account (mail, contacts, calendar)
-	- configure osama.hassanein@telekom.sk account (calendar)
-	- hide all unnecessary calendars
-	- recolor all calendars
 
 Office
 + Word 2016
@@ -19,12 +12,11 @@ Office
 	- remove clipper from startup
 	- hide Office Upload Center notifications show all but dont display
 + KeePass 2
-+ Toggl Desktop
 - Calculator
 
 Remote connection
 + Postman
-+ Teamviewer 13
++ Teamviewer
 	- login as player1os@gmail.com
 	- options/Remote Control/Remove remote wallpaper = false
 	- options/Meeting/Remove own wallpaper = false
@@ -99,15 +91,12 @@ Maintenance
 - RegEdit
 
 Utilities
-- CPU-Z
 - Simple Shutdown Timer
 - On-Screen Keyboard
 + Task Scheduler
 + DEAMON Tools Lite
 	- associate with the (vmdk, zip, cue) extenstions
 - Command Prompt
-- Windows PowerShell
-- Windows PowerShell ISE
 - Character Map
 
 Multimedia
@@ -115,12 +104,9 @@ Multimedia
 + Spotify
 + VLC media player
 - Paint
-+ Paint 3D
-+ FL Studio 12
-+ Audacity
 + ImageJ
 - Adobe Photoshop (64 bit)
-	- add ICO file format and other plugins	
+	- add ICO file format and other plugins
 + Adobe Illustrator
 + Adobe Premiere Pro
 + Adobe After Effects
@@ -163,7 +149,6 @@ Hidden
 	- Pin Smart Scan, Full Scan, Virus Chest and Update
 	- Disable sounds and turning icon
 	- Disable appended footer in email
-+ Composer
 - Adobe Acrobat DC
 	- Font Pack
 + f.lux
@@ -176,8 +161,6 @@ Hidden
 Other
 + PC Settings
 + AutoHotkey
-- AutoIt3 Window Spy
 + Outlook 2010/2007
 	- Set read mail immediatly
 	- Run outlook on startup minimized
-+ Paint.net

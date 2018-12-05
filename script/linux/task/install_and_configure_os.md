@@ -1,36 +1,3 @@
-# Install the operating system
-
-1. Select the *English* language option and press the `Enter` key.
-1. Select the *Start Lubuntu* option and press the `Enter` key.
-1. Wait until the system starts, and double click on the **Install Lubuntu 18.10** icon on the top left corner.
-1. Select the *American English* language option in the dropdown combo-box and click on the **Next** button in the lower right portion of the window.
-1. Select the current location of permanent residence in the world map and click on the **Next** button in the lower right portion of the window.
-1. Select the *English (US) | Default* keyboard layout and click on the **Next** button in the lower right portion of the window.
-1. Select the *Erase disk and install Lubuntu* option and make sure nothing else is selected.
-	1. Make sure the *Encrypt system* checkbox is not checked.
-	1. Make sure the *Boot loader location* is set to `Master Boot Record of ATA VBOX HARDDISK (/dev/sda)`.
-	1. Click on the **Next** button in the lower right portion of the window.
-1. In the *Users* window:
-	1. Set the *What is your name?* field.
-	1. Set the *What name do you want to use to log in?* field.
-	1. Set the *What is the name of this computer?* field.
-	1. Set both fields named *Choose a password to keep your account safe*.
-	1. Select the *Log in automatically without asking for the password* option if in a safe environment.
-	1. Click on the **Next** button in the lower right portion of the window.
-1. In the *Summary* window, click on the **Install** button in the lower right portion of the window.
-1. When prompted by the *Continue with setup?* dialog, click on the **Install Now** button.
-
-```
-1. In the *Updates and other software* window:
-	1. Set the *What apps would you like to install to start with?* field to `Normal installation`.
-	1. Set the *Download updates while installing Lubuntu* field to `TRUE`.
-	1. Set the *Install third-party software for graphics and Wi-Fi hardware and additional media formats* field to `TRUE`.
-	1. Click on the **Continue** button in the lower right portion of the window.
-1. When prompted by the *Installation Complete* dialog box, click on the **Restart Now** button.
-1. When prompted by the *Remove the installation media* request, press the `Enter` key.
-1. If prompted by the *Software Updated* dialog, click on the **Restart Now** button.
-```
-
 # Disable the screen saver
 
 Click on *Menu* > *Preferences* > *Screensaver*. Under the *Display Modes* tab, set *Mode* to `Disable Screen Saver`.
