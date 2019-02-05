@@ -1,0 +1,28 @@
+Windows Registry Editor Version 5.00
+
+; Command Prompt
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\shell\01MenuCmd]
+"MUIVerb"="Command Prompts"
+"Icon"="cmd.exe"
+"ExtendedSubCommandsKey"="Directory\\ContextMenus\\MenuCmd"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\background\shell\01MenuCmd]
+"MUIVerb"="Command Prompts"
+"Icon"="cmd.exe"
+"ExtendedSubCommandsKey"="Directory\\ContextMenus\\MenuCmd"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\ContextMenus\MenuCmd\shell\open]
+"MUIVerb"="Command Prompt"
+"Icon"="cmd.exe"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\ContextMenus\MenuCmd\shell\open\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\ContextMenus\MenuCmd\shell\runas]
+"MUIVerb"="Command Prompt Elevated"
+"Icon"="cmd.exe"
+"HasLUAShield"=""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\ContextMenus\MenuCmd\shell\runas\command]
+@="cmd.exe /s /k pushd \"%V\""

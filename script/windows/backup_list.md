@@ -1,3 +1,0 @@
-- Virtual machines under "C:\"
-- SSH keys under "C:\Users\Player1os"
-- Game under "C:\Games" and "C:\Users\Player1os"
