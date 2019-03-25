@@ -9,7 +9,10 @@ APP_NODENV_EXTRA_CERTIFICATE_AUTHORITY=
 git clone https://github.com/nodenv/nodenv.git ~/.nodenv
 
 # Build the contained binaries.
-cd ~/.nodenv && src/configure && make -C src
+cd ~/.nodenv
+src/configure
+make -C src
+cd ~
 
 # Configure the startup script.
 echo "*** Run '~/.nodenv/bin/nodenv init' if something goes wrong ***"
