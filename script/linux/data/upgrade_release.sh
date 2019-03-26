@@ -1,5 +1,5 @@
-# Update the apt Repositories
+# Update the apt repositories.
 sudo apt-get update
 
-# Upgrade the distro
+# Upgrade the distro.
 sudo do-release-upgrade
