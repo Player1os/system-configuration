@@ -1,2 +1,0 @@
-Configure the following environment variable
-NLS_LANG=AMERICAN_AMERICA.EE8MSWIN1250
