@@ -3,7 +3,6 @@
 # Configure the input variables.
 APP_NODENV_NODE_VERSION=10.6.0
 APP_NODENV_NPM_VERSION=6.1.0
-APP_NODENV_EXTRA_CERTIFICATE_AUTHORITY=
 
 # Clone the nodenv reporitory.
 git clone https://github.com/nodenv/nodenv.git ~/.nodenv
@@ -44,10 +43,10 @@ nodenv global ${APP_NODENV_NODE_VERSION}
 npm i -g npm@${APP_NODENV_NPM_VERSION}
 
 # Make sure the extra certification authority is added.
-if [ ! -z ${APP_NODENV_EXTRA_CERTIFICATE_AUTHORITY} ]; then
-	npm config set cafile "${APP_NODENV_EXTRA_CERTIFICATE_AUTHORITY}"
+if [ ! -z ${APP_EXTRA_CERTIFICATE_AUTHORITY} ]; then
+	npm config set cafile "${APP_EXTRA_CERTIFICATE_AUTHORITY}"
 
-	echo "NODE_EXTRA_CA_CERTS=${APP_NODENV_EXTRA_CERTIFICATE_AUTHORITY}" >> ~/.bashrc
+	echo "NODE_EXTRA_CA_CERTS=${APP_EXTRA_CERTIFICATE_AUTHORITY}" >> ~/.bashrc
 fi
 
 # Add the local node modules bin file to the path variable.
