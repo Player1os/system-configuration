@@ -2,6 +2,7 @@
 
 # Configure system specific variables.
 APP_EXTRA_CERTIFICATE_AUTHORITY=
+IS_WINDOWS=FALSE
 
 # Enable the rc.local script.
 sudo cp ./script/linux/rc.local /etc/

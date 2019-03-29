@@ -56,16 +56,19 @@
 	"git.autofetch": true,
 	"git.confirmSync": false,
 	"git.enableSmartCommit": true,
+{{#APP_EXTRA_CERTIFICATE_AUTHORITY}}
+	"http.proxyStrictSSL": false,
+{{/APP_EXTRA_CERTIFICATE_AUTHORITY}}
 	"npm-intellisense.scanDevDependencies": true,
 	"path-autocomplete.pathMappings": { "...": "${workspace}" },
-{{#WINDOWS}}
+{{#IS_WINDOWS}}
 	"terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
-{{/WINDOWS}}
+{{/IS_WINDOWS}}
 	"typescript.suggest.autoImports": false,
 	"typescript.referencesCodeLens.enabled": true,
-{{#CONTROLLED_ENVIRONMENT}}
+{{#IS_CONTROLLED_ENVIRONMENT}}
 	"vsicons.dontShowNewVersionMessage": true,
-{{/CONTROLLED_ENVIRONMENT}}
+{{/IS_CONTROLLED_ENVIRONMENT}}
 	"vsicons.presets.angular": true,
 	"vsicons.projectDetection.disableDetect": true,
 	"workbench.iconTheme": "vscode-icons"
