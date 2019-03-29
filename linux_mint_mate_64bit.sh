@@ -3,6 +3,16 @@
 # Configure system specific variables.
 APP_EXTRA_CERTIFICATE_AUTHORITY=
 
+# Enable the rc.local script.
+sudo cp ./script/linux/rc.local /etc/
+sudo chmod +x /etc/rc.local
+sudo systemctl enable rc-local
+sudo systemctl restart rc-local
+
+# Remove useless folders.
+rm -rf ~/Public
+rm -rf ~/Templates
+
 # Copy, setup and run the update script.
 cp ./script/linux/update_system.sh ~/
 chmod +x ~/update_system.sh
