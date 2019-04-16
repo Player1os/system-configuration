@@ -1,17 +1,15 @@
 #!/bin/bash
 
-# Configure the input variables.
-APP_NODENV_NODE_VERSION=10.6.0
-APP_NODENV_NPM_VERSION=6.1.0
-
 # Clone the nodenv reporitory.
 git clone https://github.com/nodenv/nodenv.git ~/.nodenv
 
 # Build the contained binaries.
+APP_OLD_PWD=$PWD
 cd ~/.nodenv
 src/configure
 make -C src
-cd ~
+cd $APP_OLD_PWD
+APP_OLD_PWD=
 
 # Configure the startup script.
 echo "*** Run '~/.nodenv/bin/nodenv init' if something goes wrong ***"
@@ -35,19 +33,12 @@ nodenv package-hooks install --all
 nodenv update
 
 # Install and configure the required node version.
-nodenv install ${APP_NODENV_NODE_VERSION}
+nodenv install $APP_NODENV_NODE_VERSION
 nodenv rehash
-nodenv global ${APP_NODENV_NODE_VERSION}
+nodenv global $APP_NODENV_NODE_VERSION
 
 # Update the npm application to the required version.
-npm i -g npm@${APP_NODENV_NPM_VERSION}
-
-# Make sure the extra certification authority is added.
-if [ ! -z ${APP_EXTRA_CERTIFICATE_AUTHORITY} ]; then
-	npm config set cafile "${APP_EXTRA_CERTIFICATE_AUTHORITY}"
-
-	echo "NODE_EXTRA_CA_CERTS=${APP_EXTRA_CERTIFICATE_AUTHORITY}" >> ~/.bashrc
-fi
+npm i -g npm@$APP_NODENV_NPM_VERSION
 
 # Add the local node modules bin file to the path variable.
 echo 'export PATH="node_modules/.bin:$PATH"' >> ~/.bashrc
