@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 # Configure system specific variables.
-APP_EXTRA_CERTIFICATE_AUTHORITY=
-IS_WINDOWS=FALSE
+. ./.env
 
 # Enable the rc.local script.
 sudo cp ./script/linux/rc.local /etc/
@@ -31,7 +30,13 @@ sudo apt-get install build-essential -y
 sudo apt-get install python3-pip -y
 
 # Install NodeJS through nodenv.
-./script/nodejs/nodenv.sh
+. ./script/nodejs/nodenv.sh
+
+# Make sure the current project's dependencies are installed.
+npm i
 
 # Load the git configurations files.
 npm start script/git
+
+# Load the vscode configurations files.
+npm start script/vscode
