@@ -9,9 +9,11 @@ const path = require('path')
 // Validate the environment variables.
 validateEnv({
 	type: 'object',
-	required: ['PROGRAMS_INSTALL_PATH'],
+	required: [
+		'APP_PROGRAMS_INSTALL_PATH',
+	],
 	properties: {
-		PROGRAMS_INSTALL_PATH: {
+		APP_PROGRAMS_INSTALL_PATH: {
 			type: 'string',
 			minLength: 1,
 		},
@@ -22,7 +24,7 @@ const directoryName = 'drawio'
 const tempSourceDirectoryName = 'drawio-tmp'
 
 ;(async () => {
-	process.chdir(process.env.PROGRAMS_INSTALL_PATH)
+	process.chdir(process.env.APP_PROGRAMS_INSTALL_PATH)
 
 	await spawnChildProcess('git', [
 		'clone', '--recursive',

@@ -1,12 +1,12 @@
 [core]
-	attributesfile = {{ESCAPED_HOME_PATH}}\\.gitattributes
+	attributesfile = {{{APP_GIT_ATTRIBUTESFILE}}}
 	autocrlf = false
-	excludesfile = {{ESCAPED_HOME_PATH}}\\.gitignore
+	excludesfile = {{{APP_GIT_EXCLUDESFILE}}}
 	eol = lf
 [user]
-	name = {{USER_FULL_NAME}}
-	email = {{USER_EMAIL}}
-{{IF_CERT_NEEDED_BEGIN}}
+	name = {{{APP_USER_FULL_NAME}}}
+	email = {{{APP_USER_EMAIL}}}
+{{#APP_EXTRA_CERTIFICATE_AUTHORITY_BUNDLE_FILE_PATH}}
 [http]
-	sslcainfo = {{ESCAPED_HOME_PATH}}\\.cert_auth_bundle.cer
-{{IF_CERT_NEEDED_END}}
+	sslcainfo = {{{APP_GIT_SSLCAINFO}}}
+{{/APP_EXTRA_CERTIFICATE_AUTHORITY_BUNDLE_FILE_PATH}}

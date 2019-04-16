@@ -30,45 +30,32 @@
 	],
 	"cSpell.language": "en",
 	"cSpell.userWords": [
-		"autofetch",
-		"com",
-		"eslintignore",
-		"gitattributes",
-		"gitignore",
-		"gmail",
-		"hassanein",
-		"os",
-		"osama",
-		"player",
-		"postversion",
-		"preversion",
-		"rebased",
-		"vsicons"
+		"{{{APP_VSCODE_DICTIONARY}}}"
 	],
 	"diffEditor.ignoreTrimWhitespace": false,
 	"editor.renderWhitespace": "all",
 	"editor.rulers": [140],
 	"editor.wordWrap": "on",
 	"eslint.options": {
-		"ignorePath": "{{HOME}}\\.eslintignore"
+		"ignorePath": "{{{APP_VSCODE_ESLINTIGNORE_PATH}}}"
 	},
 	"extensions.ignoreRecommendations": true,
 	"git.autofetch": true,
 	"git.confirmSync": false,
 	"git.enableSmartCommit": true,
-{{#APP_EXTRA_CERTIFICATE_AUTHORITY}}
+{{#APP_EXTRA_CERTIFICATE_AUTHORITY_BUNDLE_FILE_PATH}}
 	"http.proxyStrictSSL": false,
-{{/APP_EXTRA_CERTIFICATE_AUTHORITY}}
+{{/APP_EXTRA_CERTIFICATE_AUTHORITY_BUNDLE_FILE_PATH}}
 	"npm-intellisense.scanDevDependencies": true,
 	"path-autocomplete.pathMappings": { "...": "${workspace}" },
-{{#IS_WINDOWS}}
+{{#APP_OS_IS_WINDOWS}}
 	"terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
-{{/IS_WINDOWS}}
+{{/APP_OS_IS_WINDOWS}}
 	"typescript.suggest.autoImports": false,
 	"typescript.referencesCodeLens.enabled": true,
-{{#IS_CONTROLLED_ENVIRONMENT}}
+{{#APP_VSCODE_IS_UPDATE_DISABLED}}
 	"vsicons.dontShowNewVersionMessage": true,
-{{/IS_CONTROLLED_ENVIRONMENT}}
+{{/APP_VSCODE_IS_UPDATE_DISABLED}}
 	"vsicons.presets.angular": true,
 	"vsicons.projectDetection.disableDetect": true,
 	"workbench.iconTheme": "vscode-icons"
