@@ -1,0 +1,17 @@
+autofetch
+com
+drawio
+editorconfig
+eslintignore
+gitattributes
+gitignore
+gmail
+hassanein
+nodenv
+os
+osama
+player
+postversion
+preversion
+rebased
+vsicons
