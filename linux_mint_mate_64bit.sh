@@ -29,6 +29,10 @@ sudo apt-get install build-essential -y
 # Install the pip for python3 package.
 sudo apt-get install python3-pip -y
 
+# Configure both pip and python to point to the python 3.x implementations.
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
+sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
+
 # Install NodeJS through nodenv.
 . ./script/nodejs/nodenv.sh
 
