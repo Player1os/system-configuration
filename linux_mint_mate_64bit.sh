@@ -33,6 +33,12 @@ sudo apt-get install python3-pip -y
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
 
+# Install the pipenv pip package.
+pip install pipenv
+
+# Install the pylint pip package.
+/usr/bin/python3 -m pip install -U pylint --user
+
 # Install NodeJS through nodenv.
 . ./script/nodejs/nodenv.sh
 
