@@ -27,4 +27,19 @@ const settingsPath = (process.env.APP_OS_IS_WINDOWS === 'TRUE')
 	: path.join('.config', 'Code', 'User')
 const settingsObject = fsExtra.readJsonSync(path.join(process.env.HOME, settingsPath, 'settings.json'))
 
-fsExtra.writeFileSync(path.join(__dirname, 'dictionary.txt'), settingsObject['cSpell.userWords'].join('\n') + '\n', 'utf-8')
+// Store the words as a set.
+const wordSet = new Set(settingsObject['cSpell.userWords'])
+
+// Store the dictionary file's path.
+const dictionaryFilePath = path.join(__dirname, 'dictionary.txt')
+
+// Load the dictionary file.
+const dictionaryLines = fsExtra.readFileSync(dictionaryFilePath, 'utf-8').split('\n')
+dictionaryLines.pop()
+
+// Attempt to add each line to the word set.
+for (const dictionaryLine of dictionaryLines) {
+	wordSet.add(dictionaryLine)
+}
+
+fsExtra.writeFileSync(dictionaryFilePath, [...wordSet].sort().join('\n') + '\n', 'utf-8')
