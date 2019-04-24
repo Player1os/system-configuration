@@ -33,8 +33,8 @@ nodenv update
 
 # Install and configure the required node version.
 nodenv install $APP_NODENV_NODE_VERSION
-nodenv rehash
 nodenv global $APP_NODENV_NODE_VERSION
+nodenv rehash
 
 # Update the npm application to the required version.
 npm i -g npm@$APP_NODENV_NPM_VERSION

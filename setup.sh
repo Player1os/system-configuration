@@ -17,18 +17,18 @@ if [ $APP_SETUP_IS_REMOVE_USLESS_DIRS_ENABLED ]; then
 	rm -rf ~/Templates
 fi
 
-# Copy, setup and run the update script.
+# Copy, setup and run the update system script.
 cp ./script/linux/update_system.sh ~/
 chmod +x ~/update_system.sh
 ~/update_system.sh
 
-# Copy, setup and run the upgrade script.
+# Copy, setup and run the upgrade release script.
 cp ./script/linux/upgrade_release.sh ~/
 chmod +x ~/upgrade_release.sh
 ~/upgrade_release.sh
 
-# Install the Build Essential package.
-sudo apt-get install build-essential -y
+# Install the build dependency packages.
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 
 # Install Python through pyenv.
 . ./script/python/pyenv.sh

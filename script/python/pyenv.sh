@@ -23,6 +23,7 @@ fi
 # Install and configure the required python version.
 pyenv install $APP_PYENV_PYTHON_VERSION
 pyenv global $APP_PYENV_PYTHON_VERSION
+pyenv rehash
 
 # Install the pipenv pip package.
 pip install -U pipenv==$APP_PYENV_PIPENV_VERSION
