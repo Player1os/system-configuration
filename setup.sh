@@ -54,3 +54,9 @@ if [ $APP_SETUP_IS_WEBSERVER_FIREWALL_ENABLED ]; then
 	sudo ufw allow https
 	sudo ufw enable
 fi
+
+# Install the webserver rcode client.
+if [ $APP_SETUP_IS_WEBSERVER_RCODE_ENABLED ]; then
+	sudo wget -O /usr/local/bin/rcode https://raw.github.com/aurora/rmate/master/rmate
+	sudo chmod a+x /usr/local/bin/rcode
+fi
