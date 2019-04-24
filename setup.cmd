@@ -4,7 +4,7 @@
 npm i
 
 :: Install the drawio local instance.
-npm start script/drawio
+npm start script/drawio/install
 
 :: Load the git configurations files.
 npm start script/git
