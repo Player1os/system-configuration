@@ -36,9 +36,6 @@ sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev li
 # Install NodeJS through nodenv.
 . ./script/nodejs/nodenv.sh
 
-# Install the current project's dependencies.
-npm i
-
 # Load the git configurations files.
 npm start script/git
 
@@ -52,7 +49,7 @@ if [ $APP_SETUP_IS_WEBSERVER_FIREWALL_ENABLED ]; then
 	sudo ufw allow ssh
 	sudo ufw allow http
 	sudo ufw allow https
-	sudo ufw enable
+	echo y | sudo ufw enable
 fi
 
 # Install the webserver rcode client.
