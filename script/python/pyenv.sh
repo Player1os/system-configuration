@@ -25,5 +25,8 @@ pyenv install $APP_PYENV_PYTHON_VERSION
 pyenv global $APP_PYENV_PYTHON_VERSION
 pyenv rehash
 
+# Upgrade the pip package.
+pip install --upgrade pip
+
 # Install the pipenv pip package.
-pip install -U pipenv==$APP_PYENV_PIPENV_VERSION
+pip install -U pipenv
