@@ -46,3 +46,11 @@ npm start script/git
 if [ $APP_SETUP_IS_VSCODE_CONFIGURATION_ENABLED ]; then
 	npm start script/vscode
 fi
+
+# Configure the webserver firewall.
+if [ $APP_SETUP_IS_WEBSERVER_FIREWALL_ENABLED ]; then
+	sudo ufw allow ssh
+	sudo ufw allow http
+	sudo ufw allow https
+	sudo ufw enable
+fi
