@@ -1,6 +1,6 @@
 #!/bin/bash
 
 # Mount the shared folders from the host machine.
-# mount -t vboxsf -o rw,uid=1000,gid=1000 ${SHARED_FOLDER_NAME} ${MOUNT_DIRECTORY}
+# mount -t vboxsf -o rw,uid=1000,gid=1000 $SHARED_FOLDER_NAME $MOUNT_DIRECTORY
 
 exit 0
