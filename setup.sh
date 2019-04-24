@@ -30,23 +30,8 @@ chmod +x ~/upgrade_release.sh
 # Install the Build Essential package.
 sudo apt-get install build-essential -y
 
-# Install the Python3 package.
-if [ $APP_SETUP_IS_INSTALL_PYTHON3_ENABLED ]; then
-	sudo apt-get install python3 -y
-fi
-
-# Configure python to point to the python 3.x implementation.
-if [ $APP_SETUP_IS_CONFIGURE_PYTHON3_ALTERNATIVE_ENABLED ]; then
-	sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
-fi
-
-# Install the pip for python3 package.
-curl https://bootstrap.pypa.io/get-pip.py -o ~/get-pip.py
-python ~/get-pip.py --user
-rm ~/get-pip.py
-
-# Install the pipenv pip package.
-pip install pipenv --user
+# Install Python through pyenv.
+. ./script/python/pyenv.sh
 
 # Install NodeJS through nodenv.
 . ./script/nodejs/nodenv.sh
