@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Clone the nodenv reporitory.
 git clone https://github.com/nodenv/nodenv.git ~/.nodenv
@@ -12,14 +12,13 @@ cd $APP_OLD_PWD
 APP_OLD_PWD=
 
 # Configure the startup script.
-echo "*** Run '~/.nodenv/bin/nodenv init' if something goes wrong ***"
-echo "" >> ~/.bashrc
-echo "## Nodenv" >> ~/.bashrc
-echo "" >> ~/.bashrc
+echo '' >> ~/.bashrc
+echo '## Setup nodenv' >> ~/.bashrc
+echo '' >> ~/.bashrc
 echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(nodenv init -)"' >> ~/.bashrc
 
-# Configure the nodenv function.
+# Rerun the startup script.
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 
@@ -43,3 +42,6 @@ npm i -g npm@$APP_NODENV_NPM_VERSION
 # Add the local node modules bin file to the path variable.
 echo 'export PATH="node_modules/.bin:$PATH"' >> ~/.bashrc
 export PATH="node_modules/.bin:$PATH"
+
+# Configure the .npmrc file.
+npm start script/nodejs
