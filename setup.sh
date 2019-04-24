@@ -36,7 +36,7 @@ sudo apt-get install build-essential -y
 # Install NodeJS through nodenv.
 . ./script/nodejs/nodenv.sh
 
-# Make sure the current project's dependencies are installed.
+# Install the current project's dependencies.
 npm i
 
 # Load the git configurations files.

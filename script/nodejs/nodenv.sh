@@ -43,5 +43,5 @@ npm i -g npm@$APP_NODENV_NPM_VERSION
 echo 'export PATH="node_modules/.bin:$PATH"' >> ~/.bashrc
 export PATH="node_modules/.bin:$PATH"
 
-# Configure the .npmrc file.
+# Load the nodejs configuration files.
 npm start script/nodejs
