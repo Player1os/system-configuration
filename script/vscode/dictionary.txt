@@ -1,4 +1,5 @@
 autofetch
+autorun
 com
 drawio
 editorconfig
@@ -8,10 +9,13 @@ gitignore
 gmail
 hassanein
 nodenv
+npmrc
 os
 osama
 player
 postversion
 preversion
 rebased
+rebases
+truthy
 vsicons
