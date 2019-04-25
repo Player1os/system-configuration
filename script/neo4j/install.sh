@@ -20,15 +20,11 @@ sudo cp ./script/neo4j/neo4j_ctl /etc/init.d/neo4j_ctl
 sudo chmod 744 /etc/init.d/neo4j_ctl
 
 if [[ $(/sbin/runlevel) == "N 3" ]]; then
-	cd /etc/rc3.d
-	sudo ln -s ../init.d/neo4j_ctl S40neo4j_ctl
-	cd /etc/rc0.d
-	sudo ln -s ../init.d/neo4j_ctl K30neo4j_ctl
+	sudo ln -s /etc/init.d/neo4j_ctl /etc/rc3.d/S40neo4j_ctl
+	sudo ln -s /etc/init.d/neo4j_ctl /etc/rc0.d/K30neo4j_ctl
 fi
 
 if [[ $(/sbin/runlevel) == "N 5" ]]; then
-	cd /etc/rc5.d
-	sudo ln -s ../init.d/neo4j_ctl S40neo4j_ctl
-	cd /etc/rc0.d
-	sudo ln -s ../init.d/neo4j_ctl K30neo4j_ctl
+	sudo ln -s /etc/init.d/neo4j_ctl /etc/rc5.d/S40neo4j_ctl
+	sudo ln -s /etc/init.d/neo4j_ctl /etc/rc0.d/K30neo4j_ctl
 fi
