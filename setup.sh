@@ -25,7 +25,6 @@ chmod +x ~/update_system.sh
 # Copy, setup and run the upgrade release script.
 cp ./script/linux/upgrade_release.sh ~/
 chmod +x ~/upgrade_release.sh
-~/upgrade_release.sh
 
 # Install the build dependency packages.
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev python-openssl git ufw zip unzip
