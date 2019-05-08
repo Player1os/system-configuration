@@ -23,11 +23,11 @@ export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 
 # Install the nodenv plugins.
-mkdir -p "$(nodenv root)"/plugins
-git clone https://github.com/nodenv/node-build.git $(nodenv root)/plugins/node-build
-git clone https://github.com/nodenv/node-build-update-defs.git "$(nodenv root)"/plugins/node-build-update-defs
-git clone https://github.com/nodenv/nodenv-package-rehash.git "$(nodenv root)"/plugins/nodenv-package-rehash
-git clone https://github.com/nodenv/nodenv-update.git "$(nodenv root)"/plugins/nodenv-update
+mkdir -p "$(nodenv root)/plugins"
+git clone https://github.com/nodenv/node-build.git "$(nodenv root)/plugins/node-build"
+git clone https://github.com/nodenv/node-build-update-defs.git "$(nodenv root)/plugins/node-build-update-defs"
+git clone https://github.com/nodenv/nodenv-package-rehash.git "$(nodenv root)/plugins/nodenv-package-rehash"
+git clone https://github.com/nodenv/nodenv-update.git "$(nodenv root)/plugins/nodenv-update"
 nodenv package-hooks install --all
 nodenv update
 
@@ -48,3 +48,10 @@ npm i
 
 # Load the nodejs configuration files.
 npm start script/nodejs
+
+# Add update commands to the update_system.sh script.
+echo '' >> ~/update_system.sh
+echo '# Update nodenv.' >> ~/update_system.sh
+echo 'nodenv package-hooks install --all' >> ~/update_system.sh
+echo 'nodenv update' >> ~/update_system.sh
+echo 'nodenv rehash' >> ~/update_system.sh
