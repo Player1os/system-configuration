@@ -1,5 +1,8 @@
 @echo off
 
+:: Copy and setup the update system script.
+copy .\script\windows\update_system.bat %HOMEDRIVE%%HOMEPATH%\
+
 :: Install the current project's dependencies.
 call npm i
 
