@@ -22,7 +22,7 @@ fi
 
 # Install the pyenv plugins.
 mkdir -p "$(pyenv root)/plugins"
-git clone git://github.com/pyenv/pyenv-update.git "$(pyenv root)/plugins/pyenv-update"
+git clone https://github.com/pyenv/pyenv-update.git "$(pyenv root)/plugins/pyenv-update"
 pyenv update
 
 # Install and configure the required python version.
