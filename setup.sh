@@ -56,3 +56,19 @@ if [ $APP_SETUP_IS_WEBSERVER_RCODE_ENABLED ]; then
 	sudo wget -O /usr/local/bin/rcode https://raw.github.com/aurora/rmate/master/rmate
 	sudo chmod a+x /usr/local/bin/rcode
 fi
+
+# Install the serve npm application.
+if [ $APP_SETUP_IS_SERVE_NPM_APP_ENABLED ]; then
+	npm i -g serve@latest
+	echo '' >> ~/update_system.sh
+	echo '# Update the serve npm application.' >> ~/update_system.sh
+	echo 'npm i -g serve@latest' >> ~/update_system.sh
+fi
+
+# Install the surge npm application.
+if [ $APP_SETUP_IS_SURGE_NPM_APP_ENABLED ]; then
+	npm i -g surge@latest
+	echo '' >> ~/update_system.sh
+	echo '# Update the surge npm application.' >> ~/update_system.sh
+	echo 'npm i -g surge@latest' >> ~/update_system.sh
+fi
