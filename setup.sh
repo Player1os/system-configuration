@@ -57,6 +57,31 @@ if [ $APP_SETUP_IS_WEBSERVER_RCODE_ENABLED ]; then
 	sudo chmod a+x /usr/local/bin/rcode
 fi
 
+# Install the nginx application.
+if [ $APP_SETUP_IS_NGINX_ENABLED ]; then
+	sudo apt-get install -y nginx
+fi
+
+# Install the mongodb application.
+if [ $APP_SETUP_IS_MONGODB_ENABLED ]; then
+	. ./script/mongodb/install.sh
+fi
+
+# Install the neo4j application.
+if [ $APP_SETUP_IS_NEO4J_ENABLED ]; then
+	. ./script/neo4j/install.sh
+fi
+
+# Install the postgresql application.
+if [ $APP_SETUP_IS_POSTGRESQL_ENABLED ]; then
+	. ./script/postgresql/install.sh
+fi
+
+# Install the pm2 npm application.
+if [ $APP_SETUP_IS_PM2_NPM_APP_ENABLED ]; then
+	. ./script/pm2/install.sh
+fi
+
 # Install the serve npm application.
 if [ $APP_SETUP_IS_SERVE_NPM_APP_ENABLED ]; then
 	npm i -g serve@latest
