@@ -12,6 +12,8 @@ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo 'if command -v pyenv 1>/dev/null 2>&1; then' >> ~/.bashrc
 echo '    eval "$(pyenv init -)"' >> ~/.bashrc
 echo 'fi' >> ~/.bashrc
+echo 'export PIPENV_VENV_IN_PROJECT=1' >> ~/.bashrc
+echo 'export PIPENV_VERBOSITY=-1' >> ~/.bashrc
 
 # Rerun the startup script.
 export PYENV_ROOT="$HOME/.pyenv"
@@ -19,6 +21,8 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
 	eval "$(pyenv init -)"
 fi
+export PIPENV_VENV_IN_PROJECT=1
+export PIPENV_VERBOSITY=-1
 
 # Install the pyenv plugins.
 mkdir -p "$(pyenv root)/plugins"
