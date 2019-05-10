@@ -48,6 +48,9 @@ const settingsPath = (process.env.APP_OS_IS_WINDOWS === 'TRUE')
 	? path.join('AppData', 'Roaming', 'Code', 'User')
 	: path.join('.config', 'Code', 'User')
 copyTemplateSync(path.join(__dirname, 'settings.json.mustache'), path.join(process.env.HOME, settingsPath, 'settings.json'), {
+	APP_OS_NOT_IS_WINDOWS: (process.env.APP_OS_IS_WINDOWS === 'TRUE')
+		? ''
+		: 'TRUE',
 	APP_VSCODE_DICTIONARY: dictionaryLines.join('",\n		"'),
 	APP_VSCODE_ESLINTIGNORE_PATH: path.join(process.env.HOME, '.eslintignore').replace(/\\/g, '\\\\'),
 })

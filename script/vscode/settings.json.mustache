@@ -39,6 +39,8 @@
 	"eslint.options": {
 		"ignorePath": "{{{APP_VSCODE_ESLINTIGNORE_PATH}}}"
 	},
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
 	"extensions.ignoreRecommendations": true,
 	"git.autofetch": true,
 	"git.confirmSync": false,
@@ -48,6 +50,9 @@
 {{/APP_EXTRA_CERTIFICATE_AUTHORITY_BUNDLE_FILE_PATH}}
 	"npm-intellisense.scanDevDependencies": true,
 	"path-autocomplete.pathMappings": { "...": "${workspace}" },
+{{#APP_OS_NOT_IS_WINDOWS}}
+	"python.linting.mypyEnabled": true,
+{{/APP_OS_NOT_IS_WINDOWS}}
 {{#APP_OS_IS_WINDOWS}}
 	"terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
 {{/APP_OS_IS_WINDOWS}}
