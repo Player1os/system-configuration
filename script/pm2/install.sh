@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# In the global nodenv instance run.
+# Install in the global nodenv instance.
 npm i -g pm2@latest
 
 # Configure for startup.
