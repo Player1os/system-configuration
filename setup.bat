@@ -18,6 +18,9 @@ call npm start script/nodejs
 :: Load the vscode configurations files.
 call npm start script/vscode
 
+:: Install the angular-cli npm application.
+call npm i -g @angular/cli@latest
+
 :: Install the serve npm application.
 call npm i -g serve@latest
 

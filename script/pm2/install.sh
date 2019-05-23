@@ -11,5 +11,5 @@ pm2 save
 
 # Add update commands to the update_system.sh script.
 echo '' >> ~/update_system.sh
-echo '# Update pm2.' >> ~/update_system.sh
+echo '# Update the pm2 npm application.' >> ~/update_system.sh
 echo 'npm i -g pm2@latest' >> ~/update_system.sh

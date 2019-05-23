@@ -82,6 +82,11 @@ if [ $APP_SETUP_IS_PM2_NPM_APP_ENABLED ]; then
 	. ./script/pm2/install.sh
 fi
 
+# Install the angular-cli npm application.
+if [ $APP_SETUP_IS_ANGULAR_CLI_NPM_APP_ENABLED ]; then
+	. ./script/angular-cli/install.sh
+fi
+
 # Install the serve npm application.
 if [ $APP_SETUP_IS_SERVE_NPM_APP_ENABLED ]; then
 	. ./script/serve/install.sh
