@@ -6,9 +6,6 @@ copy .\script\windows\update_system.bat %HOMEDRIVE%%HOMEPATH%\
 :: Install the current project's dependencies.
 call npm i
 
-:: Install the drawio local instance.
-call npm start script/drawio/install
-
 :: Load the git configurations files.
 call npm start script/git
 
