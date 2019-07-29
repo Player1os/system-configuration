@@ -36,9 +36,7 @@ validateEnv({
 	},
 })
 
-fsExtra.copySync(path.join(__dirname, '.gitattributes.mustache'), path.join(process.env.HOME, '.gitattributes'))
 copyTemplateSync(path.join(__dirname, '.gitconfig.mustache'), path.join(process.env.HOME, '.gitconfig'), {
-	APP_GIT_ATTRIBUTESFILE: path.join(process.env.HOME, '.gitattributes').replace(/\\/g, '\\\\'),
 	APP_GIT_EXCLUDESFILE: path.join(process.env.HOME, '.gitignore').replace(/\\/g, '\\\\'),
 	APP_GIT_SSLCAINFO: process.env.APP_EXTRA_CERTIFICATE_AUTHORITY_BUNDLE_FILE_PATH.replace(/\\/g, '\\\\'),
 })

@@ -1,12 +1,12 @@
 [core]
-	attributesfile = {{{APP_GIT_ATTRIBUTESFILE}}}
 	autocrlf = false
 	excludesfile = {{{APP_GIT_EXCLUDESFILE}}}
-	eol = lf
 [user]
 	name = {{{APP_USER_FULL_NAME}}}
 	email = {{{APP_USER_EMAIL}}}
-{{#APP_EXTRA_CERTIFICATE_AUTHORITY_BUNDLE_FILE_PATH}}
 [http]
+{{#APP_EXTRA_CERTIFICATE_AUTHORITY_BUNDLE_FILE_PATH}}
 	sslcainfo = {{{APP_GIT_SSLCAINFO}}}
 {{/APP_EXTRA_CERTIFICATE_AUTHORITY_BUNDLE_FILE_PATH}}
+	sslbackend = openssl
+	sslversion = tlsv1.3
