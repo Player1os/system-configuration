@@ -16,7 +16,26 @@ echo "The default username and password is 'neo4j'"
 echo "The web GUI is available at http://localhost:7474/"
 
 # Configure the server to start on system boot.
-sudo cp ./script/neo4j/neo4j_ctl /etc/init.d/neo4j_ctl
+sudo cat << EOF > /etc/init.d/neo4j_ctl
+#!/bin/sh
+
+case "$1" in
+'start')
+	service neo4j start
+	;;
+'stop')
+	service neo4j stop
+	;;
+'restart')
+	service neo4j restart
+	;;
+*)
+	echo "Usage: $0 { start | stop | restart }"
+	exit 1
+	;;
+esac
+exit 0
+EOF
 sudo chmod 744 /etc/init.d/neo4j_ctl
 
 if [[ $(/sbin/runlevel) == "N 3" ]]; then

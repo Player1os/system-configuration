@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Configure runtime version.
+PYTHON_VERSION=3.8.5
+
 # Clone the pyenv reporitory.
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
@@ -30,8 +33,8 @@ git clone https://github.com/pyenv/pyenv-update.git "$(pyenv root)/plugins/pyenv
 pyenv update
 
 # Install and configure the required python version.
-pyenv install $APP_PYENV_PYTHON_VERSION
-pyenv global $APP_PYENV_PYTHON_VERSION
+pyenv install $PYTHON_VERSION
+pyenv global $PYTHON_VERSION
 pyenv rehash
 
 # Upgrade the pip package.

@@ -1,9 +1,8 @@
 [core]
 	autocrlf = false
-	excludesfile = ${Home Directory}.gitignore
+	excludesfile = ${Home directory}.gitignore
 [user]
-	name = ${Full Name}
-	email = ${Email Address}
+	name = ${Full name}
+	email = ${Email address}
 [http]
-	sslbackend = openssl
 	sslversion = tlsv1.3

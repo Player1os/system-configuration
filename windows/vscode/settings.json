@@ -1,47 +1,20 @@
 {
-	"cSpell.enabledLanguageIds": [
-		"asciidoc",
-		"c",
-		"cpp",
-		"csharp",
-		"css",
-		"go",
-		"handlebars",
-		"html",
-		"jade",
-		"javascript",
-		"javascriptreact",
-		"json",
-		"latex",
-		"less",
-		"markdown",
-		"mustache",
-		"php",
-		"plaintext",
-		"pub",
-		"python",
-		"restructuredtext",
-		"rust",
-		"scss",
-		"text",
-		"typescript",
-		"typescriptreact",
-		"yml"
-	],
-	"cSpell.language": "en",
-	"cSpell.userWords": [
-		"{{{APP_VSCODE_DICTIONARY}}}"
-	],
 	"diffEditor.ignoreTrimWhitespace": false,
+	"diffEditor.renderSideBySide": false,
 	"editor.renderWhitespace": "all",
 	"editor.rulers": [140],
+	"editor.semanticTokenColorCustomizations": {},
 	"editor.wordWrap": "on",
-	"eslint.options": {
-		"ignorePath": "{{{APP_VSCODE_ESLINTIGNORE_PATH}}}"
-	},
 	"explorer.confirmDelete": false,
 	"explorer.confirmDragAndDrop": false,
 	"extensions.ignoreRecommendations": true,
+	"files.associations": {
+		"*.bas": "vbscript",
+		"*.cls": "vbscript",
+		"*.frm": "vbscript",
+		"*.pdc": "sql",
+		"*.wsh": "xml"
+	},
 	"files.watcherExclude": {
 		"**/.git/objects/**": true,
 		"**/.git/subtree-cache/**": true,
@@ -53,20 +26,30 @@
 	"git.autofetch": true,
 	"git.confirmSync": false,
 	"git.enableSmartCommit": true,
-{{#APP_EXTRA_CERTIFICATE_AUTHORITY_BUNDLE_FILE_PATH}}
-	"http.proxyStrictSSL": false,
-{{/APP_EXTRA_CERTIFICATE_AUTHORITY_BUNDLE_FILE_PATH}}
-	"npm-intellisense.scanDevDependencies": true,
-	"path-autocomplete.pathMappings": { "...": "${workspace}" },
-{{#APP_OS_NOT_IS_WINDOWS}}
+	"json.schemaDownload.enable": false,
 	"python.linting.mypyEnabled": true,
-{{/APP_OS_NOT_IS_WINDOWS}}
-{{#APP_OS_IS_WINDOWS}}
+	"remote.SSH.remotePlatform": {
+		"Linux-Virtual-Machine": "linux"
+	},
 	"terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
-{{/APP_OS_IS_WINDOWS}}
 	"typescript.suggest.autoImports": false,
 	"typescript.referencesCodeLens.enabled": true,
+	"typescript.tsdk": "node_modules/typescript/lib",
 	"typescript.updateImportsOnFileMove.enabled": "never",
+	"vsicons.associations.files": [{
+		"extensions": ["bas", "frm", "cls"],
+		"icon": "vba",
+		"format": "svg"
+	}, {
+		"extensions": ["vbs"],
+		"icon": "vb",
+		"format": "svg"
+	}, {
+		"extensions": ["pdc"],
+		"icon": "plsql",
+		"format": "svg"
+	}],
+	"vsicons.dontShowNewVersionMessage": true,
 	"vsicons.presets.angular": true,
 	"vsicons.projectDetection.disableDetect": true,
 	"workbench.iconTheme": "vscode-icons"

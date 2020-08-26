@@ -12,14 +12,14 @@ indent_style = tab
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.tsv]
+[{*.csv,*.tsv,*.txt}]
 insert_final_newline = false
 trim_trailing_whitespace = false
 
 [{*.html,*.json,*.reg,*.yaml,*.yml}]
 indent_size = 2
 
-[{*.bas,*.cls,*.frm,*.reg,angular.json,package.json,*.py,*.pyw,*.yaml,*.yml}]
+[{angular.json,package.json,*.bas,*.cls,*.frm,*.py,*.pyw,*.reg,*.yaml,*.yml}]
 indent_style = space
 
 [{*.bas,*.cls,*.frm}]

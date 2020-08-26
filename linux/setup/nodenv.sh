@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Configure runtime versions.
+NODE_VERSION=12.18.3
+NPM_VERSION=6.14.8
+
 # Clone the nodenv reporitory.
 git clone https://github.com/nodenv/nodenv.git ~/.nodenv
 
@@ -32,22 +36,22 @@ nodenv package-hooks install --all
 nodenv update
 
 # Install and configure the required node version.
-nodenv install $APP_NODENV_NODE_VERSION
-nodenv global $APP_NODENV_NODE_VERSION
+nodenv install $NODE_VERSION
+nodenv global $NODE_VERSION
 nodenv rehash
 
 # Update the npm application to the required version.
-npm i -g npm@$APP_NODENV_NPM_VERSION
+npm i -g npm@$NPM_VERSION
 
 # Add the local node modules bin file to the path variable.
 echo 'export PATH="node_modules/.bin:$PATH"' >> ~/.bashrc
 export PATH="node_modules/.bin:$PATH"
 
-# Install the current project's dependencies.
-npm i
-
-# Load the nodejs configuration files.
-npm start script/nodejs
+# Create the npm configuration file.
+echo 'engine-strict=true' > ~/.npmrc
+if [ -f ~/.cert_auth_bundle.cer ]; then
+	echo 'cafile=~/.cert_auth_bundle.cer' >> ~/.npmrc
+fi
 
 # Add update commands to the update_system.sh script.
 echo '' >> ~/update_system.sh
