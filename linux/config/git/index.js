@@ -2,9 +2,6 @@
 const copyTemplateSync = require('.../lib/copy_template_sync')
 const validateEnv = require('.../lib/validate_env')
 
-// Load npm modules.
-const fsExtra = require('fs-extra')
-
 // Load node modules.
 const path = require('path')
 
@@ -40,4 +37,4 @@ copyTemplateSync(path.join(__dirname, '.gitconfig.mustache'), path.join(process.
 	APP_GIT_EXCLUDESFILE: path.join(process.env.HOME, '.gitignore').replace(/\\/g, '\\\\'),
 	APP_GIT_SSLCAINFO: process.env.APP_EXTRA_CERTIFICATE_AUTHORITY_BUNDLE_FILE_PATH.replace(/\\/g, '\\\\'),
 })
-fsExtra.copySync(path.join(__dirname, '.gitignore.mustache'), path.join(process.env.HOME, '.gitignore'))
+copyTemplateSync(path.join(__dirname, '.gitignore.mustache'), path.join(process.env.HOME, '.gitignore'))

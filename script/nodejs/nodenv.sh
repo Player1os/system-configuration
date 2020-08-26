@@ -4,12 +4,12 @@
 git clone https://github.com/nodenv/nodenv.git ~/.nodenv
 
 # Build the contained binaries.
-APP_OLD_PWD=$PWD
+TMP_PWD=$PWD
 cd ~/.nodenv
 src/configure
 make -C src
-cd $APP_OLD_PWD
-APP_OLD_PWD=
+cd $TMP_PWD
+TMP_PWD=
 
 # Configure the startup script.
 echo '' >> ~/.bashrc
