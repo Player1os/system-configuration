@@ -12,6 +12,7 @@
 		"*.bas": "vbscript",
 		"*.cls": "vbscript",
 		"*.frm": "vbscript",
+		"*.hta": "html",
 		"*.pdc": "sql",
 		"*.wsh": "xml"
 	},
@@ -37,7 +38,11 @@
 	"typescript.tsdk": "node_modules/typescript/lib",
 	"typescript.updateImportsOnFileMove.enabled": "never",
 	"vsicons.associations.files": [{
-		"extensions": ["bas", "frm", "cls"],
+		"extensions": [
+			"bas",
+			"cls",
+			"frm"
+		],
 		"icon": "vba",
 		"format": "svg"
 	}, {
@@ -45,7 +50,10 @@
 		"icon": "vb",
 		"format": "svg"
 	}, {
-		"extensions": ["pdc"],
+		"extensions": [
+			"ctl",
+			"pdc"
+		],
 		"icon": "plsql",
 		"format": "svg"
 	}],
