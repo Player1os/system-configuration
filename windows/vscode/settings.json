@@ -27,6 +27,8 @@
 	"git.autofetch": true,
 	"git.confirmSync": false,
 	"git.enableSmartCommit": true,
+	"javascript.updateImportsOnFileMove.enabled": "never",
+	"javascript.implicitProjectConfig.experimentalDecorators": true,
 	"json.schemaDownload.enable": false,
 	"python.linting.mypyEnabled": true,
 	"remote.SSH.remotePlatform": {
